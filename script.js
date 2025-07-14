@@ -23,6 +23,7 @@ addUser.addEventListener("click", (e) => {
     message.style.display = "block";
     return;
   }
+  console.log(employes);
   let newId = employes.length + 1;
   let newEmploye = {
     id: newId,
