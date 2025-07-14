@@ -1,0 +1,120 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #000000;
+  color: #ffff;
+  padding: 20px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  /* display: grid;
+  grid-template-columns: repeat(3, 350px); */
+  column-gap: 30px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+input {
+  padding: 10px;
+  color: #ffff;
+  border: 1px solid white;
+  background-color: #000000;
+  margin: 10px 0px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 10px;
+  display: inline;
+  width: 100px;
+  border: none;
+  border-radius: 24px;
+}
+
+button[id="delete"] {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  display: inline;
+  width: 100px;
+  border: none;
+}
+
+.employeList {
+  width: 60vw;
+}
+
+#employes {
+  width: 100%;
+  display: flex;
+  border: 1px solid white;
+  justify-content: space-around;
+  padding: 5px 2px;
+  border-radius: 16px;
+  flex: 1;
+  overflow: hidden;
+}
+
+#employes > p {
+  margin: 10px;
+}
+
+.employeList > ul > li {
+  width: 450px;
+  display: flex;
+  gap: 20px;
+  margin: 10px 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+#message {
+  display: none;
+}
+
+@media screen and (650px <= width <= 1250px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 319px));
+    column-gap: 30px;
+  }
+}
+
+@media screen and (420px <= width <650px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 210px));
+    grid-template-rows: repeat(2);
+    column-gap: 30px;
+  }
+}
+@media screen and (width < 420px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(290px, 300px));
+    grid-template-rows: repeat(2);
+    column-gap: 30px;
+  }
+}
+
+@media screen and (width > 1250px) {
+  input {
+    width: 350px;
+  }
+}
