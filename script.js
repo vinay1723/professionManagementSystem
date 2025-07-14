@@ -45,7 +45,6 @@ deleteBtn.addEventListener("click", (e) => {
   if (e.target.type !== "button") {
     return;
   }
-  console.log(employes);
   const userId = Number(e.target.getAttribute("data-user-id"));
 
   employes = employes.filter((employe) => employe.id !== userId);
