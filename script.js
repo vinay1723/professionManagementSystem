@@ -1,4 +1,4 @@
-let employes = [];
+let employes;
 let employeList = document.querySelector(".employeList > ul");
 let addUser = document.getElementById("add");
 let inputs = document.querySelectorAll("input");
@@ -6,7 +6,8 @@ let message = document.getElementById("message");
 let deleteBtn = document.querySelector(".employeList");
 
 window.onload = () => {
-  employes = JSON.parse(localStorage.getItem("employList"));
+  employes = JSON.parse(localStorage.getItem("employList")) || [];
+
   renderEmployes(employes);
 };
 
