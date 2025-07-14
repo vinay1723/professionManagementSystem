@@ -62,7 +62,7 @@ deleteBtn.addEventListener("click", (e) => {
 });
 
 function renderEmployes(employes) {
-  if (employes.length === 0) return;
+  if (!employes) return;
   localStorage.setItem("employList", JSON.stringify(employes));
   employeList.innerHTML = "";
   employes.forEach((employe) => {
